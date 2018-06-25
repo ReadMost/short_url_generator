@@ -1,0 +1,10 @@
+
+         
+
+    <tr>
+      <th><%= link.old_link%></th>
+      <td><%= time_ago_in_word(link.created_at)%></td>
+      <td><%= link_to link.new_link, link.new_link %></td>
+      <td> <%=link.count%></td>
+    </tr>
+  

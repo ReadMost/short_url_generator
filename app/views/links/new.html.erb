@@ -1,0 +1,29 @@
+<h1>Enter the Url</h1>
+<%= form_for(@link, url: create_path) do |l|%>
+<%= render 'shared/error_messages', object: l.object %>
+<%= l.label :old_link %>
+<%= l.text_field :old_link, class: "form-control", placeholder: " My URL"%>
+
+<%= l.submit "Generate", class: "btn btn-info" %>
+
+<% end %>
+ <div class="jumbotron">
+        <div class="container">
+        <table class="table">
+
+  <thead>
+    <tr>
+      <th scope="col">Long url</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Short url</th>
+      <th scope="col">Count</th>
+    </tr>
+  </thead>
+  <tbody>
+
+        <%= render @links %>
+          </tbody>
+</table>
+
+    </div>
+</div>
